@@ -3,7 +3,7 @@ locals {
   vpc_cidr = "10.80.0.0/16"
 }
 module "staging" {
-  source         = "github.com/nkempuclovis/modules//vpc?ref=v1.0.0" #"./modules"
+  source         = "github.com/nkempuclovis/modules//vpc?ref=v1.0.2" #"./modules"
   vpc_cidr       = local.vpc_cidr
   env            = local.env
   # public_subnets = local.public_subnets
