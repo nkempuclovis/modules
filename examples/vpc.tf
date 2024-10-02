@@ -1,5 +1,9 @@
+locals {
+  env = "test"
+  vpc_cidr = "10.80.0.0/16"
+}
 module "staging" {
-  source         = "./modules"
+  source         = "github.com/nkempuclovis/modules//vpc?ref=v1.0.0" #"./modules"
   vpc_cidr       = local.vpc_cidr
   env            = local.env
   # public_subnets = local.public_subnets
@@ -22,3 +26,12 @@ output "vpc_id" {
 #   value = module.staging.public_subnet_ids
 # }
 
+#git@github.com:nkempuclovis/modules.git
+
+#github.com/nkempuclovis/modules//vpc
+
+#github.com/organization/repo/path-to-module
+
+#github.com/organization/repo/path-to-module?ref=v1.0
+
+#github.com/organization/repo/path-to-module?ref=branch0name
